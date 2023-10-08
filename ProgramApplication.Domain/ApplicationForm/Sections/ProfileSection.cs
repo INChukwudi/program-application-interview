@@ -1,26 +1,25 @@
-﻿using ProgramApplication.Domain.Common.Constants;
-using ProgramApplication.Domain.Common.Entities;
+﻿using ProgramApplication.Domain.Common.Entities;
 
 namespace ProgramApplication.Domain.ApplicationForm.Sections
 {
     public class ProfileSection
     {
-        private readonly List<ProfileSubSections> _subSections = new();
+        private readonly List<ProfileSubSection> _subSections = new();
 
-        public List<ProfileSubSections> SubSections => _subSections.ToList();
+        public List<ProfileSubSection> SubSections => _subSections.ToList();
 
-        private void AddSubSections(List<ProfileSubSections> subSections)
+        private void AddSubSections(List<ProfileSubSection> subSections)
         {
             subSections.ForEach(_subSections.Add);
         }
 
-        public ProfileSection(List<ProfileSubSections> subSections)
+        public ProfileSection(List<ProfileSubSection> subSections)
         {
             AddSubSections(subSections);
         }
     }
 
-    public class ProfileSubSections
+    public class ProfileSubSection
     {
         private readonly List<QuestionBase> _questions = new();
 
@@ -37,7 +36,7 @@ namespace ProgramApplication.Domain.ApplicationForm.Sections
             questions.ForEach(_questions.Add);
         }
 
-        public ProfileSubSections(string name, List<QuestionBase> questions)
+        public ProfileSubSection(string name, List<QuestionBase> questions)
         {
             Name = name;
             AddQuestions(questions);

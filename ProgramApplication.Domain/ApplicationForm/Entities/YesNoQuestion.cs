@@ -1,11 +1,6 @@
 ﻿using ProgramApplication.Domain.Common.Constants;
 using ProgramApplication.Domain.Common.Entities;
 using ProgramApplication.Domain.Common.ValueObjects;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace ProgramApplication.Domain.ApplicationForm.Entities
 {
