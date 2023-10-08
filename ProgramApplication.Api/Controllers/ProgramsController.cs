@@ -31,7 +31,7 @@ namespace ProgramApplication.Api.Controllers
         {
             var command = _mapper.Map<CreateProgramCommand>(programRequest);
             var createProgramResult = await _mediator.Send(command);
-            return Ok(programRequest);
+            return Ok(createProgramResult);
         }
         
         [HttpPut("{id}")]
