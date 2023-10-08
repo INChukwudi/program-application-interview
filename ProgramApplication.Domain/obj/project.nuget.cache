@@ -1,8 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "TfOND1zRA55FlpFosqJq1uUCgKsFE0lRthzD/kZmA8jF//1MdkmK3MS94XF5PYsfhVHkCd2LsDhA9RspBukFSw==",
+  "dgSpecHash": "NrI0TZrbcmGK/wzqAzpzLQQsIxwZ0iY6Xa/osvEu3cKia8UBQLk5AoFgP2sdKw6LR06vwW/MblOzvAxhOc1S8w==",
   "success": true,
   "projectFilePath": "C:\\Users\\DELL\\source\\repos\\ProgramApplication\\ProgramApplication.Domain\\ProgramApplication.Domain.csproj",
-  "expectedPackageFiles": [],
+  "expectedPackageFiles": [
+    "C:\\Users\\DELL\\.nuget\\packages\\erroror\\1.3.0\\erroror.1.3.0.nupkg.sha512"
+  ],
   "logs": []
 }
