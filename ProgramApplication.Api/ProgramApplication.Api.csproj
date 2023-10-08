@@ -15,4 +15,10 @@
     <Folder Include="Controllers\" />
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\ProgramApplication.Contracts\ProgramApplication.Contracts.csproj" />
+    <ProjectReference Include="..\ProgramApplication.Application\ProgramApplication.Application.csproj" />
+    <ProjectReference Include="..\ProgramApplication.Infrastructure\ProgramApplication.Infrastructure.csproj" />
+  </ItemGroup>
+
 </Project>

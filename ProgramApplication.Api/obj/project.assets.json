@@ -107,6 +107,52 @@
         "frameworkReferences": [
           "Microsoft.AspNetCore.App"
         ]
+      },
+      "ProgramApplication.Application/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v7.0",
+        "dependencies": {
+          "ProgramApplication.Domain": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/ProgramApplication.Application.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/ProgramApplication.Application.dll": {}
+        }
+      },
+      "ProgramApplication.Contracts/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v7.0",
+        "compile": {
+          "bin/placeholder/ProgramApplication.Contracts.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/ProgramApplication.Contracts.dll": {}
+        }
+      },
+      "ProgramApplication.Domain/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v7.0",
+        "compile": {
+          "bin/placeholder/ProgramApplication.Domain.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/ProgramApplication.Domain.dll": {}
+        }
+      },
+      "ProgramApplication.Infrastructure/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v7.0",
+        "dependencies": {
+          "ProgramApplication.Application": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/ProgramApplication.Infrastructure.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/ProgramApplication.Infrastructure.dll": {}
+        }
       }
     }
   },
@@ -451,11 +497,34 @@
         "swashbuckle.aspnetcore.swaggerui.6.4.0.nupkg.sha512",
         "swashbuckle.aspnetcore.swaggerui.nuspec"
       ]
+    },
+    "ProgramApplication.Application/1.0.0": {
+      "type": "project",
+      "path": "../ProgramApplication.Application/ProgramApplication.Application.csproj",
+      "msbuildProject": "../ProgramApplication.Application/ProgramApplication.Application.csproj"
+    },
+    "ProgramApplication.Contracts/1.0.0": {
+      "type": "project",
+      "path": "../ProgramApplication.Contracts/ProgramApplication.Contracts.csproj",
+      "msbuildProject": "../ProgramApplication.Contracts/ProgramApplication.Contracts.csproj"
+    },
+    "ProgramApplication.Domain/1.0.0": {
+      "type": "project",
+      "path": "../ProgramApplication.Domain/ProgramApplication.Domain.csproj",
+      "msbuildProject": "../ProgramApplication.Domain/ProgramApplication.Domain.csproj"
+    },
+    "ProgramApplication.Infrastructure/1.0.0": {
+      "type": "project",
+      "path": "../ProgramApplication.Infrastructure/ProgramApplication.Infrastructure.csproj",
+      "msbuildProject": "../ProgramApplication.Infrastructure/ProgramApplication.Infrastructure.csproj"
     }
   },
   "projectFileDependencyGroups": {
     "net7.0": [
       "Microsoft.AspNetCore.OpenApi >= 7.0.5",
+      "ProgramApplication.Application >= 1.0.0",
+      "ProgramApplication.Contracts >= 1.0.0",
+      "ProgramApplication.Infrastructure >= 1.0.0",
       "Swashbuckle.AspNetCore >= 6.4.0"
     ]
   },
@@ -491,7 +560,17 @@
       "frameworks": {
         "net7.0": {
           "targetAlias": "net7.0",
-          "projectReferences": {}
+          "projectReferences": {
+            "C:\\Users\\DELL\\source\\repos\\ProgramApplication\\ProgramApplication.Application\\ProgramApplication.Application.csproj": {
+              "projectPath": "C:\\Users\\DELL\\source\\repos\\ProgramApplication\\ProgramApplication.Application\\ProgramApplication.Application.csproj"
+            },
+            "C:\\Users\\DELL\\source\\repos\\ProgramApplication\\ProgramApplication.Contracts\\ProgramApplication.Contracts.csproj": {
+              "projectPath": "C:\\Users\\DELL\\source\\repos\\ProgramApplication\\ProgramApplication.Contracts\\ProgramApplication.Contracts.csproj"
+            },
+            "C:\\Users\\DELL\\source\\repos\\ProgramApplication\\ProgramApplication.Infrastructure\\ProgramApplication.Infrastructure.csproj": {
+              "projectPath": "C:\\Users\\DELL\\source\\repos\\ProgramApplication\\ProgramApplication.Infrastructure\\ProgramApplication.Infrastructure.csproj"
+            }
+          }
         }
       },
       "warningProperties": {

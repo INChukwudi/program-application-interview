@@ -1,11 +1,48 @@
 {
   "version": 3,
   "targets": {
-    "net7.0": {}
+    "net7.0": {
+      "ProgramApplication.Application/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v7.0",
+        "dependencies": {
+          "ProgramApplication.Domain": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/ProgramApplication.Application.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/ProgramApplication.Application.dll": {}
+        }
+      },
+      "ProgramApplication.Domain/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v7.0",
+        "compile": {
+          "bin/placeholder/ProgramApplication.Domain.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/ProgramApplication.Domain.dll": {}
+        }
+      }
+    }
   },
-  "libraries": {},
+  "libraries": {
+    "ProgramApplication.Application/1.0.0": {
+      "type": "project",
+      "path": "../ProgramApplication.Application/ProgramApplication.Application.csproj",
+      "msbuildProject": "../ProgramApplication.Application/ProgramApplication.Application.csproj"
+    },
+    "ProgramApplication.Domain/1.0.0": {
+      "type": "project",
+      "path": "../ProgramApplication.Domain/ProgramApplication.Domain.csproj",
+      "msbuildProject": "../ProgramApplication.Domain/ProgramApplication.Domain.csproj"
+    }
+  },
   "projectFileDependencyGroups": {
-    "net7.0": []
+    "net7.0": [
+      "ProgramApplication.Application >= 1.0.0"
+    ]
   },
   "packageFolders": {
     "C:\\Users\\DELL\\.nuget\\packages\\": {},
@@ -39,7 +76,11 @@
       "frameworks": {
         "net7.0": {
           "targetAlias": "net7.0",
-          "projectReferences": {}
+          "projectReferences": {
+            "C:\\Users\\DELL\\source\\repos\\ProgramApplication\\ProgramApplication.Application\\ProgramApplication.Application.csproj": {
+              "projectPath": "C:\\Users\\DELL\\source\\repos\\ProgramApplication\\ProgramApplication.Application\\ProgramApplication.Application.csproj"
+            }
+          }
         }
       },
       "warningProperties": {
