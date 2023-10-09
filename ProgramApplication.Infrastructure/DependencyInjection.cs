@@ -9,6 +9,7 @@ namespace ProgramApplication.Infrastructure
         public static IServiceCollection AddInfrastructureDependencies(this IServiceCollection services)
         {
             services.AddScoped<IProgramRepository, ProgramRespository>();
+            services.AddScoped<IApplicationFormRepository, ApplicationFormRepository>();
             return services;
         }
     }
