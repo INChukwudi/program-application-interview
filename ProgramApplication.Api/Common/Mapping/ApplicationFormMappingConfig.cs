@@ -14,7 +14,8 @@ namespace ProgramApplication.Api.Common.Mapping
         {
             config.NewConfig<CreateApplicationFormRequest, CreateApplicationFormCommand>();
 
-            config.NewConfig<AdditionalQuestionsSectionRequest, AdditionalQuestionsSectionRequest>();
+            config.NewConfig<AdditionalQuestionsSectionRequest, AdditionalQuestionsSection>();
+                
             config.NewConfig<CoverImageSectionRequest, CoverImageSection>();
             config.NewConfig<PersonalInformationSectionRequest, PersonalInformationSection>();
             config.NewConfig<ProfileSectionRequest, ProfileSection>();
@@ -43,6 +44,47 @@ namespace ProgramApplication.Api.Common.Mapping
 
             config.NewConfig<QuestionBaseRequest, YesNoQuestion>()
                 .Map(dest => dest, src => src, src => src.Type == QuestionTypeConstants.YesNoQuestion);
+
+
+            config.NewConfig<DateQuestion, DateQuestionResponse>()
+                .Map(dest => dest.Id, 
+                src => src.Id.Value.ToString(), 
+                src => src.Type == QuestionTypeConstants.DateQuestion);
+
+            config.NewConfig<DropdownQuestion, DropdownQuestionResponse>()
+                .Map(dest => dest.Id, 
+                src => src.Id.Value.ToString(), 
+                src => src.Type == QuestionTypeConstants.DropdownQuestion);
+
+            config.NewConfig<FileUploadQuestion, FileUploadQuestionResponse>()
+                .Map(dest => dest.Id, 
+                src => src.Id.Value.ToString(), 
+                src => src.Type == QuestionTypeConstants.FileUploadQuestion);
+
+            config.NewConfig<MultipleChoiceQuestion, MultipleChoiceQuestionResponse>()
+                .Map(dest => dest.Id, 
+                src => src.Id.Value.ToString(), 
+                src => src.Type == QuestionTypeConstants.MultipleChoiceQuestion);
+
+            config.NewConfig<NumberQuestion, NumberQuestionResponse>()
+                .Map(dest => dest.Id, 
+                src => src.Id.Value.ToString(), 
+                src => src.Type == QuestionTypeConstants.NumberQuestion);
+
+            config.NewConfig<ParagraphQuestion, ParagraphQuestionResponse>()
+                .Map(dest => dest.Id, 
+                src => src.Id.Value.ToString(), 
+                src => src.Type == QuestionTypeConstants.ParagraphQuestion);
+
+            config.NewConfig<ShortAnswerQuestion, ShortAnswerQuestionResponse>()
+                .Map(dest => dest.Id, 
+                src => src.Id.Value.ToString(), 
+                src => src.Type == QuestionTypeConstants.ShortAnswerQuestion);
+
+            config.NewConfig<YesNoQuestion, YesNoQuestionResponse>()
+                .Map(dest => dest.Id, 
+                src => src.Id.Value.ToString(), 
+                src => src.Type == QuestionTypeConstants.YesNoQuestion);
 
 
             config.NewConfig<ApplicationForm, ApplicationFormResponse>()
