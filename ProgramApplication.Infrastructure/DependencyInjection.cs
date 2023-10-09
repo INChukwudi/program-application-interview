@@ -10,6 +10,7 @@ namespace ProgramApplication.Infrastructure
         {
             services.AddScoped<IProgramRepository, ProgramRespository>();
             services.AddScoped<IApplicationFormRepository, ApplicationFormRepository>();
+            services.AddScoped<IWorkflowRepository, WorkflowRepository>();
             return services;
         }
     }
