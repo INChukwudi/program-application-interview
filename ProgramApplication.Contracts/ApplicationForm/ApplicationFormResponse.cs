@@ -30,23 +30,26 @@
     public record DateQuestionResponse(
         string Question,
         string Type,
+        string Id,
         bool IsInternal = false,
-        bool IsHidden = false) : QuestionBaseResponse(Question, Type, IsInternal, IsHidden);
+        bool IsHidden = false) : QuestionBaseResponse(Id, Question, Type, IsInternal, IsHidden);
 
     public record DropdownQuestionResponse(
         bool IsOtherEnabled,
         List<string> Choices,
         string Question,
         string Type,
+        string Id,
         bool IsInternal = false,
-        bool IsHidden = false) : QuestionBaseResponse(Question, Type, IsInternal, IsHidden);
+        bool IsHidden = false) : QuestionBaseResponse(Id, Question, Type, IsInternal, IsHidden);
 
     public record FileUploadQuestionResponse(
         ushort MaxSize,
         string Question,
         string Type,
+        string Id,
         bool IsInternal = false,
-        bool IsHidden = false) : QuestionBaseResponse(Question, Type, IsInternal, IsHidden);
+        bool IsHidden = false) : QuestionBaseResponse(Id, Question, Type, IsInternal, IsHidden);
 
     public record MultipleChoiceQuestionResponse(
         bool IsOtherEnabled,
@@ -54,36 +57,42 @@
         ushort MaxChoices,
         string Question,
         string Type,
+        string Id,
         bool IsInternal = false,
-        bool IsHidden = false) : QuestionBaseResponse(Question, Type, IsInternal, IsHidden);
+        bool IsHidden = false) : QuestionBaseResponse(Id, Question, Type, IsInternal, IsHidden);
 
     public record NumberQuestionResponse(
         string Question,
         string Type,
+        string Id,
         bool IsInternal = false,
-        bool IsHidden = false) : QuestionBaseResponse(Question, Type, IsInternal, IsHidden);
+        bool IsHidden = false) : QuestionBaseResponse(Id, Question, Type, IsInternal, IsHidden);
 
     public record ParagraphQuestionResponse(
         uint Limit,
         string Question,
         string Type,
+        string Id,
         bool IsInternal = false,
-        bool IsHidden = false) : QuestionBaseResponse(Question, Type, IsInternal, IsHidden);
+        bool IsHidden = false) : QuestionBaseResponse(Id, Question, Type, IsInternal, IsHidden);
 
     public record ShortAnswerQuestionResponse(
         string Question,
         string Type,
+        string Id,
         bool IsInternal = false,
-        bool IsHidden = false) : QuestionBaseResponse(Question, Type, IsInternal, IsHidden);
+        bool IsHidden = false) : QuestionBaseResponse(Id, Question, Type, IsInternal, IsHidden);
 
     public record YesNoQuestionResponse(
         bool DisqualifyIfNo,
         string Question,
         string Type,
+        string Id,
         bool IsInternal = false,
-        bool IsHidden = false) : QuestionBaseResponse(Question, Type, IsInternal, IsHidden);
+        bool IsHidden = false) : QuestionBaseResponse(Id, Question, Type, IsInternal, IsHidden);
 
     public record QuestionBaseResponse(
+        string Id,
         string Question,
         string Type,
         bool IsInternal = false,
