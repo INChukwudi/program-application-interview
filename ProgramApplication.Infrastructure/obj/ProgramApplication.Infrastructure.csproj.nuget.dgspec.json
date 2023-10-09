@@ -61,10 +61,6 @@
               "target": "Package",
               "version": "[12.1.1, )"
             },
-            "MediatR.Extensions.Microsoft.DependencyInjection": {
-              "target": "Package",
-              "version": "[11.1.0, )"
-            },
             "Microsoft.Extensions.DependencyInjection.Abstractions": {
               "target": "Package",
               "version": "[7.0.0, )"
@@ -201,6 +197,14 @@
         "net7.0": {
           "targetAlias": "net7.0",
           "dependencies": {
+            "Microsoft.Azure.Cosmos": {
+              "target": "Package",
+              "version": "[3.35.4, )"
+            },
+            "Microsoft.Extensions.Configuration.Abstractions": {
+              "target": "Package",
+              "version": "[7.0.0, )"
+            },
             "Microsoft.Extensions.DependencyInjection.Abstractions": {
               "target": "Package",
               "version": "[7.0.0, )"
