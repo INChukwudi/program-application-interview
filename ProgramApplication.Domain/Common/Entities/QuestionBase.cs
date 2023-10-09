@@ -15,6 +15,7 @@ namespace ProgramApplication.Domain.Common.Entities
 
         protected QuestionBase(QuestionId id, string question, string type) : base(id)
         {
+            Id = id;
             Question = question;
             Type = type;
         }

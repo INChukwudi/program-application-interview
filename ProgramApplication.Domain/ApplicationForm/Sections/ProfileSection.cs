@@ -8,7 +8,7 @@ namespace ProgramApplication.Domain.ApplicationForm.Sections
 
         public List<ProfileSubSection> SubSections => _subSections.ToList();
 
-        private void AddSubSections(List<ProfileSubSection> subSections)
+        public void AddSubSections(List<ProfileSubSection> subSections)
         {
             subSections.ForEach(_subSections.Add);
         }
@@ -31,7 +31,7 @@ namespace ProgramApplication.Domain.ApplicationForm.Sections
 
         public IReadOnlyList<QuestionBase> Questions => _questions.ToList();
 
-        private void AddQuestions(List<QuestionBase> questions)
+        public void AddQuestions(List<QuestionBase> questions)
         {
             questions.ForEach(_questions.Add);
         }

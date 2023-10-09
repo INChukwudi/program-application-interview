@@ -11,7 +11,7 @@ namespace ProgramApplication.Domain.ApplicationForm.Sections
 
         public IReadOnlyList<QuestionBase> Questions => _questions.ToList();
 
-        private void AddQuestions(List<QuestionBase> questions)
+        public void AddQuestions(List<QuestionBase> questions)
         {
             questions.ForEach(_questions.Add);
         }
