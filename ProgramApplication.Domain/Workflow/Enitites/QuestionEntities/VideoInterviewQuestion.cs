@@ -4,7 +4,7 @@ using ProgramApplication.Domain.Common.ValueObjects;
 
 namespace ProgramApplication.Domain.Workflow.Enitites.QuestionEntities
 {
-    public class VideoInterviewQuestions : QuestionBase
+    public class VideoInterviewQuestion : QuestionBase
     {
         public string AdditionalInformation { get; }
 
@@ -14,7 +14,7 @@ namespace ProgramApplication.Domain.Workflow.Enitites.QuestionEntities
 
         public ushort Deadline { get; }
 
-        private VideoInterviewQuestions
+        private VideoInterviewQuestion
             (QuestionId id, string question, string type, string additionalInformation, ushort maxDuration,
             string units, ushort deadline)
             : base(id, question, type)
@@ -25,7 +25,7 @@ namespace ProgramApplication.Domain.Workflow.Enitites.QuestionEntities
             Deadline = deadline;
         }
 
-        public static VideoInterviewQuestions Create
+        public static VideoInterviewQuestion Create
             (QuestionId id, string question, string additionalInformation, ushort maxDuration, string units,
             ushort deadline)
         {

@@ -6,9 +6,14 @@ namespace ProgramApplication.Domain.Workflow.Enitites.StageEntities
 {
     public sealed class VideoInterviewStage : Stage
     {
-        private readonly List<VideoInterviewQuestions> _questions = new();
+        private readonly List<VideoInterviewQuestion> _questions = new();
 
-        public IReadOnlyList<VideoInterviewQuestions> Questions => _questions.ToList();
+        public IReadOnlyList<VideoInterviewQuestion> Questions => _questions.ToList();
+
+        public void AddQuestions(List<VideoInterviewQuestion> questions)
+        {
+            questions.ForEach(_questions.Add);
+        }
 
         private VideoInterviewStage(StageId id, string name, string type, bool showToCandidate, int position)
             : base(id, name, type, showToCandidate, position)

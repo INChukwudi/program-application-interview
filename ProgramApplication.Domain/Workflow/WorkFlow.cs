@@ -15,6 +15,11 @@ namespace ProgramApplication.Domain.Workflow
             Id = id;
         }
 
+        public void AddStages(List<Stage> stages)
+        {
+            stages.ForEach(_stages.Add);
+        }
+
         public static WorkFlow Create()
         {
             return new(WorkFlowId.CreateUnique());
